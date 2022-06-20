@@ -1,0 +1,31 @@
+ALGORITHM phrase
+VAR
+    nb_car,nb_mot,nb_voy,i:INTEGER:=0;
+    ch:STRING;
+BEGIN
+    Write("ecrire une phrase ");
+    read(ch);
+    WHILE (ch[i]<>'.') DO
+        nb_car:=nb_car+1;
+        IF (ch[i]=' ') THEN
+            nb_mot:=nb_mot+1;
+        END_IF
+        SWITCH (ch[i]) DO
+            case 'a' : nb_voy:=nb_voy+1;BREAK;
+        case 'e' :  nb_voy:=nb_voy+1;BREAK;
+        case 'i' :  nb_voy:=nb_voy+1;BREAK;
+        case 'u' :  nb_voy:=nb_voy+1;BREAK;
+        case 'o' :  nb_voy:=nb_voy+1;BREAK;
+        case 'y' :  nb_voy:=nb_voy+1;BREAK;
+           
+        END_SWITCH
+        i:=i+1;
+    END_WHILE
+     Write("nombre de caractere =");
+     Write(nb_car);
+      Write("nombre de mots =");
+     Write(nb_mot);
+      Write("nombre de voyelles =");
+     Write(nb_voy);
+     
+END
